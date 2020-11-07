@@ -1,0 +1,72 @@
+import java.util.Scanner;
+/**
+ 
+* Class StudentClass.
+
+* @author  Andrew Kuekam
+* @version 1.0
+* @since   2020-10-23
+*/
+public class StudentClass {
+  /**
+  *. 
+  */
+  public static void main(String[] args) {
+    Scanner userInput = new Scanner(System.in);
+    
+    System.out.println("Student Information. Enter your");
+    System.out.println("===============");
+
+    //this let enter firstname
+    System.out.print("FirstName:");
+    //Declare the String
+    String UserFristName = userInput.next();
+    System.out.println("===============");
+    System.out.println(" ");
+
+    //this let enter lastname
+    System.out.print("LastName:");
+    //Declare the String
+    String UserLastName = userInput.next();
+    System.out.println("===============");
+    System.out.println(" ");
+    
+    //This let enter middle initial
+    System.out.print("Middle Initial:");
+    //Declare the String
+    String UserMiddleInitial = userInput.next();
+    System.out.println("===============");
+    System.out.println(" ");
+    
+    //This let enter Grade
+    System.out.print("Grade:");
+    //Declare the  int
+    int UserGrade = userInput.nextInt();
+    System.out.println("===============");
+    System.out.println(" ");
+    
+    System.out.println("Do you want to identify the student");
+    System.out.println("1 for Yes");
+    System.out.println("2 for No");
+    System.out.println("===============");
+    
+    
+    //Declare the Strins
+    String userChoose;
+    
+    userChoose = userInput.next();
+    if (userChoose.equals("1")) {
+     System.out.println(UserFristName  + UserMiddleInitial  +  UserLastName + " is in Grade " + UserGrade + " and is identified.");
+    } 
+    else if (userChoose.equals("2")) {
+      System.out.println(UserFristName + UserMiddleInitial + UserLastName + "is in Grade" + UserGrade + "and is not identified");
+    }
+    else {
+      System.out.println("Error. Enter a valid number.");
+      System.out.println("Do you want to identify the student");
+      System.out.println("1 for Yes");
+      System.out.println("2 for No");
+      System.out.println("===============");
+    }
+  }
+}
